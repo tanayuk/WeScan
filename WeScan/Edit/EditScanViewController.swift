@@ -31,7 +31,7 @@ final class EditScanViewController: UIViewController {
     }()
     
     lazy private var nextButton: UIBarButtonItem = {
-        let title = NSLocalizedString("wescan.edit.button.next", tableName: nil, bundle: Bundle(for: EditScanViewController.self), value: "Next", comment: "A generic next button")
+        let title = "確認"
         let button = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(pushReviewController))
         button.tintColor = navigationController?.navigationBar.tintColor
         return button
@@ -72,7 +72,7 @@ final class EditScanViewController: UIViewController {
         
         setupViews()
         setupConstraints()
-        title = NSLocalizedString("wescan.edit.title", tableName: nil, bundle: Bundle(for: EditScanViewController.self), value: "Edit Scan", comment: "The title of the EditScanViewController")
+        title = "４つの角で調整してください"
         navigationItem.rightBarButtonItem = nextButton
         if let firstVC = self.navigationController?.viewControllers.first, firstVC == self {
           navigationItem.leftBarButtonItem = cancelButton
